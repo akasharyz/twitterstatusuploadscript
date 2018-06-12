@@ -1,5 +1,5 @@
 #import 
-import tweepy as tp
+import tweepy
 import time
 import os
 
