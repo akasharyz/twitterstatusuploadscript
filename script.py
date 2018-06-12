@@ -1,24 +1,24 @@
-# gyanopedia
-
+#import 
 import tweepy as tp
 import time
 import os
 
 # credentials to login to twitter api
-consumer_key = '1roOi997X7szhlmlLSc9G3hlK'
-consumer_secret = '5MHUURM4J87t9yk6OhaMKrxiqSwNzMBp5UlYceGKHbehCbE1xr'
-access_token = '853178510-cbisRmYB2ZUejYJpDmonZNmy4RotRywX9Cwvk25b'
-access_secret = 'xeTVetuWC3j9zBVyHdwHOJrOZKtvBrmkN8YR2utBosTp6'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_secret = ''
 
 # login to twitter account api
-auth = tp.OAuthHandler(consumer_key, consumer_secret)
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
-api = tp.API(auth)
+api = tweepy.API(auth)
 
+#Access to the folder post
 os.chdir('post')
 
-# iterates over pictures in models folder
+# iterates over pictures in post folder
 for posts in os.listdir('.'):
-    api.update_with_media(posts, status="#gyanopedia #twitter #facts #test")
+    api.update_with_media(posts, status="Enter the status here")
     time.sleep(10)
  
